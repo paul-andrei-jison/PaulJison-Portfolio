@@ -2,9 +2,9 @@ import type { AboutData } from '@/types';
 
 const about: AboutData = {
   facts: [
-    { title: 'Community', text: 'Active member of a developer community — add details about a club, meetup, or open-source group here.' },
-    { title: 'Education', text: 'Add your degree, school, or self-taught path — whatever tells your story best.' },
-    { title: 'Competitions', text: 'Add a hackathon placement or competition win here to show it off.' },
+    { title: 'Community', text: 'Active member of the Boy Scouts and a three-year varsity athlete in soccer and table tennis.' },
+    { title: 'Education', text: 'Currently attending senior high school. Expected graduation: May 2028' },
+    { title: 'Competitions', text: 'Participated in HKIMO and online hackathons.' },
   ],
   craft: {
     parts: [
@@ -18,7 +18,6 @@ const about: AboutData = {
     { name: 'Next.js', emoji: '▲' },
     { name: 'React', emoji: '⚛️' },
     { name: 'TypeScript', emoji: '🔷' },
-    { name: 'Flutter', emoji: '🦋' },
   ],
   mindset: {
     parts: [
@@ -35,15 +34,16 @@ const about: AboutData = {
       { text: 'excellence.', bold: true },
     ],
     images: [
-      { src: '/images/mindset/photo-1.jpg', label: 'Snowboarding', placeholder: 'Drop a hobby photo' },
-      { src: '/images/mindset/photo-2.jpg', label: 'Hiking', placeholder: 'Drop a hobby photo' },
-      { src: '/images/mindset/photo-3.jpg', label: 'Kickboxing', placeholder: 'Drop a hobby photo' },
+      { src: '/images/mindset/photo-1.jpg', label: 'Soccer', placeholder: 'Soccer' },
+      { src: '/images/mindset/photo-4.jpg', label: 'Soccer 2', placeholder: 'Soccer' },
+      { src: '/images/mindset/photo-2.jpg', label: 'Pingpong', placeholder: 'Pingpong' },
+      { src: '/images/mindset/photo-3.jpg', label: 'Deer', placeholder: 'Travel' },
     ],
   },
   portraits: [
-    { src: '/images/profile/portrait-1.jpg', placeholder: 'Drop a portrait' },
-    { src: '/images/profile/portrait-2.jpg', placeholder: 'Drop a portrait' },
-    { src: '/images/profile/portrait-3.jpg', placeholder: 'Drop a portrait' },
+    { src: '/images/profile/portrait-1.jpg', placeholder: 'Portrait 1' },
+    { src: '/images/profile/portrait-2.jpg', placeholder: 'Portrait 2' },
+    { src: '/images/profile/portrait-3.jpg', placeholder: 'Portrait 3' },
   ],
 };
 

@@ -85,8 +85,10 @@ export interface SkillsData {
 // achievements.ts
 export interface AchievementItem {
   id: string;
+  /** path inside /public — supports .jpg/.png/.pdf (e.g. '/images/achievements/cert.pdf') */
   image: string;
   placeholder: string;
+  title?: string;
 }
 
 export interface AchievementsData {

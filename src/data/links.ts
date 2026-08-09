@@ -1,10 +1,10 @@
 import type { SocialLink } from '@/types';
 
 const links: SocialLink[] = [
-  { platform: 'GitHub', handle: '@yourusername', url: 'https://github.com/yourusername', type: 'github' },
-  { platform: 'LinkedIn', handle: 'Paul Jison', url: 'https://linkedin.com/in/yourusername', type: 'linkedin' },
-  { platform: 'X (Twitter)', handle: '@yourusername', url: 'https://x.com/yourusername', type: 'x' },
-  { platform: 'Email', handle: 'hello@pauljison.dev', url: 'mailto:hello@pauljison.dev', type: 'email' },
+  { platform: 'GitHub', handle: '@paul-andrei-jison', url: 'https://github.com/paul-andrei-jison', type: 'github' },
+  { platform: 'LinkedIn', handle: 'Paul Andrei Jison', url: 'https://www.linkedin.com/in/paul-andrei-jison-55213a321/', type: 'linkedin' },
+  { platform: 'X', handle: '@paulandreijison', url: 'https://x.com/paulandreijison', type: 'x' },
+  { platform: 'Email', handle: 'paul.andrei.jison@gmail.com', url: 'mailto:hello@pauljison.dev', type: 'email' },
 ];
 
 export default links;
