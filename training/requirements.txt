@@ -1,0 +1,7 @@
+torch               # PyTorch — the deep learning framework that runs the model math
+transformers        # HuggingFace — provides flan-t5-small model + Seq2SeqTrainer training loop
+datasets            # HuggingFace — loads your JSON dataset and prepares it for the trainer
+optimum[exporters]  # Converts the trained PyTorch model to ONNX format for browser use
+boto3               # AWS SDK — uploads model files to S3
+sentencepiece       # Required by the flan-t5 tokenizer to split text into subword tokens
+pytest              # Test runner
