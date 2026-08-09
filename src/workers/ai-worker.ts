@@ -29,7 +29,7 @@ async function loadModel() {
   if (generator || loading) return;
   loading = true;
   try {
-    generator = await pipeline('text2text-generation', 'Xenova/flan-t5-small', {
+    generator = await pipeline('text2text-generation', 'Xenova/flan-t5-large', {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       progress_callback: (progress: any) => {
         if (progress.status === 'progress' && progress.progress != null) {
