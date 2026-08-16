@@ -1,19 +1,72 @@
 import type { AchievementsData } from '@/types';
 
-// Drop files into public/images/achievements/
-// Supported: .jpg .png .webp  and  .pdf for certificates
 const achievements: AchievementsData = {
   featured: {
-    title: 'Featured Achievement',
-    description: "Drop in a certificate, award, or milestone that means the most — with a short story of what it took to get there.",
-    image: '/images/achievements/featured.pdf',
+    title: 'IBM Full Stack Software Developer',
+    description: 'Professional certification covering the complete full-stack spectrum — from frontend frameworks and backend APIs to cloud deployment, containerization, and microservices architecture.',
+    image: '/images/achievements/coursera certificate IBM Full Stack Software Developer.pdf',
   },
-  // Add more certificates — drop the PDF into public/images/achievements/ then add an entry here
-  // Use image: '' for a placeholder slot (shows empty card until you add the file)
   items: [
-    { id: 'cert-1', image: '', title: 'Certificate 1', placeholder: 'Drop cert-1.pdf into public/images/achievements/' },
-    { id: 'cert-2', image: '', title: 'Certificate 2', placeholder: 'Drop cert-2.pdf into public/images/achievements/' },
-    { id: 'cert-3', image: '', title: 'Certificate 3', placeholder: 'Drop cert-3.pdf into public/images/achievements/' },
+    {
+      id: 'cert-node-express',
+      title: 'Developing Backend with Node.js and Express',
+      image: '/images/achievements/coursera certificate developing backend with node js and express.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-python-ai',
+      title: 'Python for AI and Development',
+      image: '/images/achievements/coursera certificate python for ai and development.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-ai-flask',
+      title: 'Developing AI Applications with Python and Flask',
+      image: '/images/achievements/coursera certificate developing ai applications with python and flask.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-containers',
+      title: 'Introduction to Containers with Docker, Kubernetes and OpenShift',
+      image: '/images/achievements/coursera certificate introduction to containers with docker, kuberneetes and openshift.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-django',
+      title: 'Django Application Development with SQL and Databases',
+      image: '/images/achievements/coursera Django Application Development with SQL and Databases.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-microservices',
+      title: 'Application Development using Microservices and Serverless',
+      image: '/images/achievements/coursera certificate application development using microservices and serverless.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-capstone',
+      title: 'Full Stack Application Development Capstone Project',
+      image: '/images/achievements/coursera certificate full stack application development capstone project.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-assessment',
+      title: 'Full Stack Software Developer Assessment',
+      image: '/images/achievements/coursera certificate full stack software developer assessment.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-genai',
+      title: 'Generative AI: Elevate Your Software Development Career',
+      image: '/images/achievements/coursera certificate generative ai elevate your software development career.pdf',
+      placeholder: '',
+    },
+    {
+      id: 'cert-career',
+      title: 'Software Developer Career Guide and Interview Preparation',
+      image: '/images/achievements/coursera certificate software developer career guide and interview preparation.pdf',
+      placeholder: '',
+    },
   ],
 };
 

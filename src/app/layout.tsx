@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${manrope.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen" suppressHydrationWarning>{children}</body>
     </html>
   );
 }
