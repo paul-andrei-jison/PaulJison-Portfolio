@@ -17,6 +17,9 @@
     "react-dom": "19.2.4",
     "tailwind-merge": "^3.6.0"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": ["onnxruntime-node", "protobufjs"]
+  },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
