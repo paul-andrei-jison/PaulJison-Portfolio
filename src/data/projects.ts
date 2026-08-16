@@ -2,29 +2,16 @@ import type { Project } from '@/types';
 
 const projects: Project[] = [
   {
-    id: 'preppilot',
+    id: 'documind',
     num: '01',
-    kicker: 'Website',
-    title: 'Prep Pilot',
-    description: "Desktop application using computer vision to scan and solve Rubik's Cube in real-time.",
-    tags: ['C++', 'OpenCV', 'Clustering', 'Algorithms'],
+    kicker: 'AI · Web App',
+    title: 'DocuMind',
+    description: "A fully local Retrieval Augmented Generation (RAG) web app. Upload PDFs and text files to a vector library, then ask questions across all documents simultaneously — answered by a local LLM with no data leaving your machine.",
+    tags: ['Python', 'Ollama', 'RAG', 'LLM', 'FastAPI'],
     images: [
-      { src: '/images/projects/cube-solver/img-1.jpg', placeholder: 'Drop Cube Solver screenshot' },
-      { src: '/images/projects/cube-solver/img-2.jpg', placeholder: 'Drop Cube Solver screenshot' },
-      { src: '/images/projects/cube-solver/img-3.jpg', placeholder: 'Drop Cube Solver screenshot' },
-    ],
-  },
-  {
-    id: 'arduinoecommercewebsite',
-    num: '02',
-    kicker: 'Website',
-    title: 'Arduino Ecommerce Website',
-    description: "Desktop application using computer vision to scan and solve Rubik's Cube in real-time.",
-    tags: ['C++', 'OpenCV', 'Clustering', 'Algorithms'],
-    images: [
-      { src: '/images/projects/cube-solver/img-1.jpg', placeholder: 'Drop Cube Solver screenshot' },
-      { src: '/images/projects/cube-solver/img-2.jpg', placeholder: 'Drop Cube Solver screenshot' },
-      { src: '/images/projects/cube-solver/img-3.jpg', placeholder: 'Drop Cube Solver screenshot' },
+      { src: '/images/projects/documind/1.png', placeholder: 'documind image 1' },
+      { src: '/images/projects/documind/2.png', placeholder: 'documind image 2' },
+      { src: '/images/projects/documind/3.png', placeholder: 'documind image 3' },
     ],
   },
 ];
