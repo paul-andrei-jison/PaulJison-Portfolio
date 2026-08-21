@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { AchievementsData } from '@/types';
 
@@ -146,11 +146,24 @@ export default function AchievementsSection({ achievements }: { achievements: Ac
   ];
 
   const [activeIdx, setActiveIdx] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [modalItem, setModalItem] = useState<CarouselItem | null>(null);
+  const resetKeyRef = useRef(0);
   const total = items.length;
 
-  const manualPrev = () => setActiveIdx((i) => (i - 1 + total) % total);
-  const manualNext = () => setActiveIdx((i) => (i + 1) % total);
+  const manualPrev = () => { setActiveIdx((i) => (i - 1 + total) % total); resetKeyRef.current += 1; };
+  const manualNext = () => { setActiveIdx((i) => (i + 1) % total); resetKeyRef.current += 1; };
+
+  useEffect(() => {
+    if (!isAutoPlay || modalItem) return;
+    const key = resetKeyRef.current;
+    const t = setInterval(() => {
+      if (resetKeyRef.current !== key) return;
+      setActiveIdx((i) => (i + 1) % total);
+    }, 2000);
+    return () => clearInterval(t);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAutoPlay, total, modalItem]);
 
   const CARD_W = 300;
   const CARD_H = 210;
@@ -234,6 +247,20 @@ export default function AchievementsSection({ achievements }: { achievements: Ac
 
           <button onClick={manualNext} aria-label="Next certificate" style={{ width: 38, height: 38, borderRadius: '50%', border: '1px solid var(--card-border)', background: 'var(--card-bg)', color: 'var(--text-primary)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'border-color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#7c3aed')} onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--card-border)')}>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </button>
+
+          <button
+            onClick={() => setIsAutoPlay((v) => !v)}
+            aria-label={isAutoPlay ? 'Pause' : 'Play'}
+            title={isAutoPlay ? 'Pause' : 'Play'}
+            style={{ width: 28, height: 28, borderRadius: '50%', border: 'none', background: 'transparent', color: 'var(--text-muted)', opacity: isAutoPlay ? 0.5 : 0.3, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'opacity 0.2s', padding: 0 }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = isAutoPlay ? '0.5' : '0.3')}
+          >
+            {isAutoPlay
+              ? <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><rect x="1" y="1" width="3.5" height="10" rx="1" /><rect x="7.5" y="1" width="3.5" height="10" rx="1" /></svg>
+              : <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M2 1.5l9 4.5-9 4.5V1.5z" /></svg>
+            }
           </button>
         </div>
 
