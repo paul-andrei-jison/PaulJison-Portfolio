@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { AboutData, SiteConfig } from '@/types';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
 
@@ -11,6 +11,18 @@ export default function AboutSection({ about, config }: Props) {
 
   const advanceMindset = () => setMindsetIdx((i) => (i + 1) % about.mindset.images.length);
   const advancePortrait = () => setPortraitIdx((i) => (i + 1) % about.portraits.length);
+
+  useEffect(() => {
+    if (about.mindset.images.length < 2) return;
+    const t = setInterval(() => setMindsetIdx((i) => (i + 1) % about.mindset.images.length), 4000);
+    return () => clearInterval(t);
+  }, [about.mindset.images.length]);
+
+  useEffect(() => {
+    if (about.portraits.length < 2) return;
+    const t = setInterval(() => setPortraitIdx((i) => (i + 1) % about.portraits.length), 4000);
+    return () => clearInterval(t);
+  }, [about.portraits.length]);
 
   return (
     <section
