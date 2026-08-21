@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import type { Project, SiteConfig } from '@/types';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import PeekCarousel from '@/components/ui/PeekCarousel';
@@ -17,7 +18,7 @@ export default function ProjectGrid({ projects, config }: Props) {
       </div>
       <div className="mt-10 max-w-4xl grid grid-cols-1 gap-6 md:grid-cols-2">
         {projects.map((project, projectIndex) => (
-          <article key={project.id} className="rounded-2xl border border-border bg-bg-card overflow-hidden">
+          <Link key={project.id} href={`/projects/${project.id}`} className="rounded-2xl border border-border bg-bg-card overflow-hidden block no-underline" style={{ textDecoration: 'none' }}>
             {/* Image carousel */}
             <PeekCarousel itemWidth={400} itemCount={project.images.length} gap={8} peek={32} className="h-56">
               {project.images.map((img, imgIndex) => (
@@ -49,7 +50,7 @@ export default function ProjectGrid({ projects, config }: Props) {
                 ))}
               </div>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>
