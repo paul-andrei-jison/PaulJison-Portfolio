@@ -68,7 +68,12 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  images: [ProjectImage, ProjectImage, ProjectImage];
+  images: ProjectImage[];
+  githubUrl?: string;
+  liveUrl?: string;
+  whatILearned?: string[];
+  howToUse?: string;
+  dateAdded?: string;
 }
 
 // skills.ts
