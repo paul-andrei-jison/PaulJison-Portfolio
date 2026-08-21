@@ -178,7 +178,7 @@ export default function AchievementsSection({ achievements }: { achievements: Ac
         </h2>
       </div>
       <div style={{ textAlign: 'center', fontSize: 15, color: 'var(--text-secondary)', marginBottom: 52 }}>
-        {total} certifications earned
+        {total} certificates earned
       </div>
 
       <div style={{ position: 'relative' }}>
