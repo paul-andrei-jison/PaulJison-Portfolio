@@ -23,9 +23,9 @@ export default function HomePageClient({ config, about, projects, skills, links,
       <NavPill />
       <HeroSection config={config} />
       <AboutSection about={about} config={config} />
+      <AchievementsSection achievements={achievements} />
       <ProjectsSection projects={projects} config={config} />
       <SkillsSection skills={skills} config={config} />
-      <AchievementsSection achievements={achievements} />
       <OtherSection links={links} />
     </>
   );
