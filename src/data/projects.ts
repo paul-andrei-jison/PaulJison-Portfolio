@@ -35,6 +35,8 @@ const projects: Project[] = [
       { src: '/images/projects/pixelforge/2.png', placeholder: 'PixelForge screenshot 2' },
       { src: '/images/projects/pixelforge/3.png', placeholder: 'PixelForge screenshot 3' },
     ],
+    githubUrl: 'https://github.com/paul-andrei-jison/Image-To-Code-Website',
+    liveUrl: 'https://imagetocode.pauljison.com',
     whatILearned: [
       "This was my first serious project that I actually deployed and finished. I've started plenty of projects before — but most of them never got completed, and almost none were ever shipped. With this one, I made a conscious decision early on to see it through to the end, no matter what.",
       "The biggest area was AI. I learned how to take AI beyond just a chat tool and use it to produce something genuinely useful — converting a screenshot into real, working code. Understanding how to structure prompts, stream responses, and integrate Claude's API into a real product was a completely new skill that opened my eyes to how powerful this technology actually is when applied well.",
